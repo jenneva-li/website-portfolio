@@ -40,18 +40,14 @@ function getProjects() {
 }
 
 
-
 function showProjects(projects) {
-    
     let projectsContainer = document.querySelector(".work .box-container");
     let projectsHTML = "";
     projects.forEach(project => {
-        console.log(`/assets/images/projects/${project.image}.jpg`);  // Check the path in the console
-        
         projectsHTML += `
         <div class="grid-item ${project.category}">
         <div class="box tilt" style="width: 380px; margin: 1rem">
-      <img draggable="false" src="./assets/images/projects/${project.image}.jpg" alt="project" />
+      <img draggable="false" src="/assets/images/projects/${project.image}.png" alt="project" />
       <div class="content">
         <div class="tag">
         <h3>${project.name}</h3>
@@ -109,6 +105,17 @@ getProjects().then(data => {
 })
 // fetch projects end
 
+// Start of Tawk.to Live Chat
+var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+(function () {
+    var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+    s1.async = true;
+    s1.src = 'https://embed.tawk.to/60df10bf7f4b000ac03ab6a8/1f9jlirg6';
+    s1.charset = 'UTF-8';
+    s1.setAttribute('crossorigin', '*');
+    s0.parentNode.insertBefore(s1, s0);
+})();
+// End of Tawk.to Live Chat
 
 // disable developer mode
 document.onkeydown = function (e) {
