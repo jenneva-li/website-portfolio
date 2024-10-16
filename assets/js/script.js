@@ -56,17 +56,17 @@ $(document).ready(function () {
 
 });
 
-document.addEventListener('visibilitychange',
-    function () {
-        if (document.visibilityState === "visible") {
-            document.title = "Portfolio | Jenneva Li";
-            $("#favicon").attr("href", "assets/images/favicon.png");
-        }
-        else {
-            document.title = "Come Back To Portfolio";
-            $("#favicon").attr("href", "assets/images/favhand.png");
-        }
-    });
+// document.addEventListener('visibilitychange',
+//     function () {
+//         if (document.visibilityState === "visible") {
+//             document.title = "Portfolio | Jenneva Li";
+//             $("#favicon").attr("href", "assets/images/favicon.png");
+//         }
+//         else {
+//             document.title = "Come Back To Portfolio";
+//             $("#favicon").attr("href", "assets/images/favhand.png");
+//         }
+//     });
 
 
 // <!-- typed js effect starts -->
@@ -107,25 +107,41 @@ function showSkills(skills) {
 function showProjects(projects) {
     let projectsContainer = document.querySelector("#work .box-container");
     let projectHTML = "";
-    projects.slice(0, 10).filter(project => project.category != "android").forEach(project => {
-        projectHTML += `
-        <div class="box tilt">
-      <img draggable="false" src="/assets/images/projects/${project.image}.png" alt="project" />
-      <div class="content">
-        <div class="tag">
-        <h3>${project.name}</h3>
-        </div>
-        <div class="desc">
-          <p>${project.desc}</p>
-          <div class="btns">
-            <a href="${project.links.view}" class="btn" target="_blank"><i class="fas fa-eye"></i> View</a>
-            <a href="${project.links.code}" class="btn" target="_blank">Code <i class="fas fa-code"></i></a>
-          </div>
-        </div>
-      </div>
-    </div>`
-    });
+
+    projects
+        .slice(0, 10)
+        .filter(project => project.category != "android")  // Exclude android category
+        .forEach(project => {
+            projectHTML += `
+            <div class="box tilt">
+                <img draggable="false" src="/assets/images/projects/${project.image}.png" alt="project" />
+                <div class="content">
+                    <div class="tag">
+                        <h3>${project.name}</h3>
+                    </div>
+                    <div class="desc">
+                        <p>${project.desc}</p>
+                        <div class="btns">`;
+
+            if (project.links && project.links.view) {
+                projectHTML += `<a href="${project.links.view}" class="btn" target="_blank"><i class="fas fa-eye"></i> View</a>`;
+            }
+
+            if (project.links && project.links.code) {
+                projectHTML += `<a href="${project.links.code}" class="btn" target="_blank">Code <i class="fas fa-code"></i></a>`;
+            }
+
+            projectHTML += `
+                        </div>
+                    </div>
+                </div>
+            </div>`;
+        });
+
+    // Insert the generated HTML into the projects container
     projectsContainer.innerHTML = projectHTML;
+
+
 
     // <!-- tilt js effect starts -->
     VanillaTilt.init(document.querySelectorAll(".tilt"), {
