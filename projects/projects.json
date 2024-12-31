@@ -39,16 +39,6 @@
     }
   },
   {
-    "name": "Turtlebot3 Controller",
-    "desc": "Scripted a keyboard controller with odom feedback for the Turtlebot3 robot that allows users to control the robot using a joystick. Built using C++ and ROS.",
-    "image": "t3controller",
-    "category": "Robotics",
-    "links": {
-      "view": "https://github.com/Jenneva-Li/tutlebot3-controller/tree/main",
-      "code": "https://github.com/Jenneva-Li/tutlebot3-controller/tree/main/turtlebot_control/src"
-    }
-  },
-  {
     "name": "AI Voice Bot",
     "desc": "Aims to deliver voice-to-text conversational AI experiences using Deepgram and Groq models.",
     "image": "voice_bot",
@@ -66,6 +56,16 @@
     "links": {
       "view": "https://github.com/jenneva-li/motor_tester_STM32IDE",
       "code": "https://github.com/jenneva-li/motor_tester_STM32IDE/blob/master/nucleof072rb/Core/Src/main.c"
+    }
+  },
+  {
+    "name": "Turtlebot3 Controller",
+    "desc": "Scripted a keyboard controller with odom feedback for the Turtlebot3 robot that allows users to control the robot using a joystick. Built using C++ and ROS.",
+    "image": "t3controller",
+    "category": "Robotics",
+    "links": {
+      "view": "https://github.com/Jenneva-Li/tutlebot3-controller/tree/main",
+      "code": "https://github.com/Jenneva-Li/tutlebot3-controller/tree/main/turtlebot_control/src"
     }
   }
 ]
