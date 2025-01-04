@@ -54,8 +54,8 @@
     "image": "motor_tester",
     "category": "Embedded Systems",
     "links": {
-      "view": "https://github.com/jenneva-li/motor_tester_STM32IDE",
-      "code": "https://github.com/jenneva-li/motor_tester_STM32IDE/blob/master/nucleof072rb/Core/Src/main.c"
+      "view": "https://github.com/jenneva-li/motor_tester_STM32IDE/tree/main",
+      "code": "https://github.com/jenneva-li/motor_tester_STM32IDE/blob/main/nucleof072rb/Core/Src/main.c"
     }
   },
   {
