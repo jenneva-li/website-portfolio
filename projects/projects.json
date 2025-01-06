@@ -50,7 +50,7 @@
   },
   {
     "name": "Motor Tester",
-    "desc": "Implemented a motor tester on STM32IDE using C logic. Motor testers are useful for determining servo motor range, continuous rotation motor speed, prototype testing, and centering servos.",
+    "desc": "Implemented a motor tester on STM32IDE using C logic.",
     "image": "motor_tester",
     "category": "Embedded Systems",
     "links": {
